@@ -54,14 +54,15 @@ const Home: React.FC = () => {
             alt="Slider 1"
             className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center text-center">
-            <p className="text-white text-2xl md:text-3xl font-semibold">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <h1 className="text-white text-shadow-lg text-5xl md:text-6xl font-bold leading-tight text-left">
               Welcome to the
               <br />
-              World of privileges.
-              <br />
-              You will feel like you are at home...
-            </p>
+              World of Privileges
+            </h1>
+            <h3 className="text-white text-4xl font-light mt-2">
+              You will feel like you are at home.
+            </h3>
           </div>
         </div>
         <div className="relative">
@@ -73,14 +74,14 @@ const Home: React.FC = () => {
         </div>
       </Slider>
 
-      <div className="py-8 text-center m-0">
-        <div className="mb-14">
+      <div className="text-center">
+        <div className="mb-14 mt-6">
           <h2 className="text-3xl text-[#134069] font-semibold mb-1">
             World and Turkey
           </h2>
           <p className="text-lg">Ayrıcalıklar Dünyasına Hoş Geldiniz.</p>
         </div>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32">
           <img
             src="../src/assets/about-us.jpg"
             alt="About Us"
@@ -103,8 +104,9 @@ const Home: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="py-8 bg-[#acbefa] mt-14">
-          <div className="mb-9">
+
+        <div className="bg-[#acbefa] mt-14">
+          <div className="p-4">
             <h2 className="text-gray-600 text-2xl md:text-3xl font-semibold mb-4 text-center">
               İştiraklerimiz
             </h2>
@@ -117,7 +119,10 @@ const Home: React.FC = () => {
                 alt="Sağlık"
                 className="w-[550px] h-[300px] object-cover mb-2"
               />
-              <a href="/health" className="text-gray-600 hover:underline text-lg">
+              <a
+                href="/health"
+                className="text-gray-600 mb-4 hover:underline text-lg"
+              >
                 Sağlık
               </a>
             </div>
@@ -127,7 +132,10 @@ const Home: React.FC = () => {
                 alt="Eğitim"
                 className="w-[550px] h-[300px] object-cover mb-2"
               />
-              <a href="/education" className="text-gray-600 hover:underline text-lg">
+              <a
+                href="/education"
+                className="text-gray-600 mb-4 hover:underline text-lg"
+              >
                 Eğitim
               </a>
             </div>
@@ -137,7 +145,10 @@ const Home: React.FC = () => {
                 alt="İnşaat"
                 className="w-[550px] h-[300px] object-cover mb-2"
               />
-              <a href="/realty" className="text-gray-600 hover:underline text-lg">
+              <a
+                href="/realty"
+                className="text-gray-600 mb-4 hover:underline text-lg"
+              >
                 Gayrimenkul
               </a>
             </div>
