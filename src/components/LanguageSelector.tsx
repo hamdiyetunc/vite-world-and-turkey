@@ -37,17 +37,17 @@ const LanguageSelector: React.FC = () => {
         </svg>
       </button>
       {isLangMenuOpen && (
-        <div className="absolute right-0 mt-2 bg-white text-black rounded shadow-lg w-48">
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+        <div className="absolute right-0 mt-2 top-full bg-[#275d9b] rounded-lg shadow-lg w-48">
+          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
             Türkçe
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
             İngilizce
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
             Arapça
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
             Rusça
           </a>
         </div>

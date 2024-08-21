@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AboutUsSection: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/aboutus");
+  };
   return (
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32 px-4 md:px-0">
       <img
@@ -20,7 +26,10 @@ const AboutUsSection: React.FC = () => {
           cevap verebilmek için gerekli tüm çalışmaları yapmaya her gün, her
           saat devam etmekteyiz.
         </p>
-        <button className="bg-[#134069] text-white py-2 px-4 rounded hover:bg-[#275d9b]">
+        <button
+          className="bg-[#134069] text-white py-2 px-4 rounded hover:bg-[#275d9b]"
+          onClick={handleClick}
+        >
           Devamını Oku
         </button>
       </div>
