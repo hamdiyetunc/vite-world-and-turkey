@@ -52,15 +52,15 @@ const Home: React.FC = () => {
           <img
             src="../src/assets/slider-2-min.jpg"
             alt="Slider 1"
-            className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h1 className="text-white text-shadow-lg text-5xl md:text-6xl font-bold leading-tight text-left">
+            <h1 className="text-white text-shadow-lg text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-left">
               Welcome to the
               <br />
               World of Privileges
             </h1>
-            <h3 className="text-white text-4xl font-light mt-2">
+            <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-light mt-2">
               You will feel like you are at home.
             </h3>
           </div>
@@ -69,29 +69,29 @@ const Home: React.FC = () => {
           <img
             src="../src/assets/wat-slider-001.jpg"
             alt="Slider 2"
-            className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
           />
         </div>
       </Slider>
 
       <div className="text-center">
         <div className="mb-14 mt-6">
-          <h2 className="text-3xl text-[#134069] font-semibold mb-1">
+          <h2 className="text-2xl sm:text-3xl text-[#134069] font-semibold mb-1">
             World and Turkey
           </h2>
           <p className="text-lg">Ayrıcalıklar Dünyasına Hoş Geldiniz.</p>
         </div>
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32 px-4 md:px-0">
           <img
             src="../src/assets/about-us.jpg"
             alt="About Us"
             className="w-full max-w-full md:max-w-[600px] h-auto object-cover"
           />
-          <div className="flex flex-col items-center md:items-start max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start max-w-xl text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
               BİZ KİMİZ? NE YAPARIZ?
             </h2>
-            <p className="text-md md:text-xl mb-6 text-center md:text-left">
+            <p className="text-md md:text-xl mb-6">
               Bünyemizde çalışan profesyonel, dinamik ve güçlü bir ekiple;
               ‘Eğitim‘, ‘Sağlık‘ ve ‘Yatırım Danışmanlığı‘ alanlarında, müşteri
               memnuniyetini ve kaliteli hizmet anlayışını her şeyden önde
@@ -112,12 +112,12 @@ const Home: React.FC = () => {
             </h2>
             <hr className="text-2xl md:text-3xl font-semibold mb-4 text-center" />
           </div>
-          <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-0">
             <div className="flex flex-col items-center">
               <img
                 src="../src/assets/wt_health.jpg"
                 alt="Sağlık"
-                className="w-[550px] h-[300px] object-cover mb-2"
+                className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
               />
               <a
                 href="/health"
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
               <img
                 src="../src/assets/wt_education.jpg"
                 alt="Eğitim"
-                className="w-[550px] h-[300px] object-cover mb-2"
+                className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
               />
               <a
                 href="/education"
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
               <img
                 src="../src/assets/wt_realty.jpg"
                 alt="İnşaat"
-                className="w-[550px] h-[300px] object-cover mb-2"
+                className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
               />
               <a
                 href="/realty"
