@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import trFlag from "../assets/tr.png";
+import usFlag from "../assets/us.png";
+import saFlag from "../assets/sa.png";
+import ruFlag from "../assets/ru.png";
 
 const LanguageSelector: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -38,18 +42,22 @@ const LanguageSelector: React.FC = () => {
       </button>
       {isLangMenuOpen && (
         <div className="absolute right-0 mt-2 top-full bg-[#275d9b] rounded-lg shadow-lg w-48">
-          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069]">
+            <img src={trFlag} alt="Türkçe" className="w-5 h-5 mr-2" />
             Türkçe
-          </a>
-          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
+          </div>
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+            <img src={usFlag} alt="İngilizce" className="w-5 h-5 mr-2" />
             İngilizce
-          </a>
-          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
+          </div>
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+            <img src={saFlag} alt="Arapça" className="w-5 h-5 mr-2" />
             Arapça
-          </a>
-          <a href="#" className="block px-4 py-2 hover:bg-[#134069]">
+          </div>
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+            <img src={ruFlag} alt="Rusça" className="w-5 h-5 mr-2" />
             Rusça
-          </a>
+          </div>
         </div>
       )}
     </div>
