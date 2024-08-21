@@ -7,7 +7,7 @@ interface NavLinksProps {
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const location = useLocation(); // Aktif yolu almak için kullanılır
+  const location = useLocation();
 
   return (
     <nav
@@ -21,7 +21,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen }) => {
           : "md:static"
       }`}
     >
-      {["ANA SAYFA", "HAKKIMIZDA", "İK", "İLETİŞİM"].map((link, index) => (
+      {["ANA SAYFA", "HAKKIMIZDA", "İLETİŞİM"].map((link, index) => (
         <Link
           key={index}
           to={
@@ -29,8 +29,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen }) => {
               ? "/"
               : link === "HAKKIMIZDA"
               ? "/aboutus"
-              : link === "İK"
-              ? "/humanresources"
               : link === "İLETİŞİM"
               ? "/contact"
               : "#"
@@ -41,8 +39,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen }) => {
               ? "/"
               : link === "HAKKIMIZDA"
               ? "/aboutus"
-              : link === "İK"
-              ? "/humanresources"
               : link === "İLETİŞİM"
               ? "/contact"
               : "#")

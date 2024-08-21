@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Footer from './components/Footer';
-import HumanResources from './pages/HumanResources';
 import Contact from './pages/Contact';
 
 const App: React.FC = () => {
@@ -16,9 +15,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/humanresources" element={<HumanResources />} />
             <Route path="/contact" element={<Contact />} />
-            {/* Add other routes here */}
           </Routes>
         </main>
         <Footer />
