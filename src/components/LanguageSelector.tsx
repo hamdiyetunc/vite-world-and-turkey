@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import trFlag from "../assets/tr.png";
-import usFlag from "../assets/us.png";
+import enFlag from "../assets/en.png";
 import saFlag from "../assets/sa.png";
 import ruFlag from "../assets/ru.png";
 import { content, Language } from "./content"; // Import content object
@@ -61,7 +61,7 @@ const LanguageSelector: React.FC = () => {
             Türkçe
           </div>
           <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("en")}>
-            <img src={usFlag} alt="İngilizce" className="w-5 h-5 mr-2" />
+            <img src={enFlag} alt="İngilizce" className="w-5 h-5 mr-2" />
             English
           </div>
           <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("ar")}>
