@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import trFlag from "../assets/tr.png";
 import usFlag from "../assets/us.png";
 import saFlag from "../assets/sa.png";
@@ -6,13 +6,19 @@ import ruFlag from "../assets/ru.png";
 
 const LanguageSelector: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setIsLangMenuOpen(true);
   };
 
   const handleMouseLeave = () => {
-    setIsLangMenuOpen(false);
+    timeoutRef.current = setTimeout(() => {
+      setIsLangMenuOpen(false);
+    }, 200);
   };
 
   return (
