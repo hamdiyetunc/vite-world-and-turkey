@@ -6,19 +6,28 @@ import { content, Language } from "./content";
 const AboutUsSection: React.FC = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
+  const isRtl = language === "ar"; // RTL control
 
   const handleClick = () => {
     navigate("/aboutus");
   };
 
   return (
-    <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32 px-4 md:px-0">
+    <div
+      className={`container mx-auto flex flex-col md:flex-row items-center justify-center ${
+        isRtl ? "space-x-reverse" : ""
+      } md:space-x-32 px-4 md:px-0 space-y-6 md:space-y-0`}
+    >
       <img
         src="../src/assets/about-us.jpg"
         alt="About Us"
         className="w-full max-w-full md:max-w-[600px] h-auto object-cover"
       />
-      <div className="flex flex-col items-center md:items-start max-w-xl text-center md:text-left">
+      <div
+        className={`flex flex-col items-center ${
+          isRtl ? "md:items-end text-right" : "md:items-start text-left"
+        } max-w-xl`}
+      >
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           {content.AboutUsSection[language as Language].title}
         </h2>
