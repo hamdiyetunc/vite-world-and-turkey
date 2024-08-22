@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import trFlag from "../assets/tr.png";
 import usFlag from "../assets/us.png";
 import saFlag from "../assets/sa.png";
 import ruFlag from "../assets/ru.png";
+import { content, Language } from "./content"; // Import content object
 
 const LanguageSelector: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const { setLanguage, language } = useLanguage(); // Get current language
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
@@ -21,6 +24,11 @@ const LanguageSelector: React.FC = () => {
     }, 200);
   };
 
+  const changeLanguage = (lang: Language) => {
+    setLanguage(lang);
+    setIsLangMenuOpen(false);
+  };
+
   return (
     <div
       className="relative z-10"
@@ -28,7 +36,7 @@ const LanguageSelector: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <button className="flex items-center px-4 py-2 mt-4 md:mt-0 rounded border">
-        Diller
+        {content.languageSelector[language]}
         <svg
           className={`w-5 h-5 ml-2 transition-transform ${
             isLangMenuOpen ? "rotate-180" : ""
@@ -48,21 +56,21 @@ const LanguageSelector: React.FC = () => {
       </button>
       {isLangMenuOpen && (
         <div className="absolute right-0 mt-2 top-full bg-[#275d9b] rounded-lg shadow-lg w-48">
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069]">
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("tr")}>
             <img src={trFlag} alt="Türkçe" className="w-5 h-5 mr-2" />
             Türkçe
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("en")}>
             <img src={usFlag} alt="İngilizce" className="w-5 h-5 mr-2" />
-            İngilizce
+            English
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("ar")}>
             <img src={saFlag} alt="Arapça" className="w-5 h-5 mr-2" />
-            Arapça
+            العربية
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer">
+          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("ru")}>
             <img src={ruFlag} alt="Rusça" className="w-5 h-5 mr-2" />
-            Rusça
+            Русский
           </div>
         </div>
       )}

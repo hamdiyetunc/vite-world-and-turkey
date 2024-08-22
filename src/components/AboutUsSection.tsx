@@ -1,12 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
+import { content, Language } from "./content";
 
 const AboutUsSection: React.FC = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
 
   const handleClick = () => {
     navigate("/aboutus");
   };
+
   return (
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-32 px-4 md:px-0">
       <img
@@ -16,21 +20,16 @@ const AboutUsSection: React.FC = () => {
       />
       <div className="flex flex-col items-center md:items-start max-w-xl text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          BİZ KİMİZ? NE YAPARIZ?
+          {content.AboutUsSection[language as Language].title}
         </h2>
         <p className="text-md md:text-xl mb-6">
-          Bünyemizde çalışan profesyonel, dinamik ve güçlü bir ekiple; ‘Eğitim‘,
-          ‘Sağlık‘ ve ‘Yatırım Danışmanlığı‘ alanlarında, müşteri memnuniyetini
-          ve kaliteli hizmet anlayışını her şeyden önde tutarak, bu ilke
-          doğrultusunda ihtiyaçlarınızın tümüne en hızlı ve en uygun şekilde
-          cevap verebilmek için gerekli tüm çalışmaları yapmaya her gün, her
-          saat devam etmekteyiz.
+          {content.AboutUsSection[language as Language].text}
         </p>
         <button
           className="bg-[#134069] text-white py-2 px-4 rounded hover:bg-[#275d9b]"
           onClick={handleClick}
         >
-          Devamını Oku
+          {content.AboutUsSectionBtn[language as Language].title}
         </button>
       </div>
     </div>

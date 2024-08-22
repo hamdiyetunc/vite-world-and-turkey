@@ -1,11 +1,16 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { content, Language } from "./content";
 
 const PartnersSection: React.FC = () => {
+  const { language } = useLanguage();
+  const { health, education, realty } = content.partners[language as Language];
+
   return (
     <div className="bg-[#acbefa] mt-14">
       <div className="p-4">
         <h2 className="text-gray-600 text-2xl md:text-3xl font-semibold mb-4 text-center">
-          İştiraklerimiz
+          {content.partners[language as Language].title}
         </h2>
         <hr className="text-2xl md:text-3xl font-semibold mb-4 text-center" />
       </div>
@@ -20,7 +25,7 @@ const PartnersSection: React.FC = () => {
             href="/health"
             className="text-gray-600 mb-4 hover:underline text-lg"
           >
-            Sağlık
+            {health}
           </a>
         </div>
         <div className="flex flex-col items-center">
@@ -33,7 +38,7 @@ const PartnersSection: React.FC = () => {
             href="/education"
             className="text-gray-600 mb-4 hover:underline text-lg"
           >
-            Eğitim
+            {education}
           </a>
         </div>
         <div className="flex flex-col items-center">
@@ -46,7 +51,7 @@ const PartnersSection: React.FC = () => {
             href="/realty"
             className="text-gray-600 mb-4 hover:underline text-lg"
           >
-            Gayrimenkul
+            {realty}
           </a>
         </div>
       </div>
