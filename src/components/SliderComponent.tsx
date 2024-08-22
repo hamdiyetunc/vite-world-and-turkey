@@ -18,7 +18,7 @@ const SliderComponent: React.FC = () => {
 
   return (
     <Slider {...settings}>
-      <div className="relative">
+      <div className="relative z-10">
         <img
           src="../src/assets/slider-2-min.jpg"
           alt="Slider 1"

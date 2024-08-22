@@ -10,8 +10,17 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   isMenuOpen,
   toggleMenu,
 }) => (
-  <button onClick={toggleMenu} className="flex items-center">
-    {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+  <button
+    onClick={toggleMenu}
+    className={`flex items-center transition-transform duration-300 ease-in-out ${
+      isMenuOpen ? "rotate-90" : "rotate-0"
+    }`}
+  >
+    {isMenuOpen ? (
+      <FaTimes size={24} />
+    ) : (
+      <FaBars size={24} className="ml-6" />
+    )}
   </button>
 );
 

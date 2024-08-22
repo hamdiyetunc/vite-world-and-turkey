@@ -23,7 +23,7 @@ const LanguageSelector: React.FC = () => {
 
   return (
     <div
-      className="relative z-50"
+      className="relative z-10"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

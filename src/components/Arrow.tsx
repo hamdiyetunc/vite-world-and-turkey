@@ -8,7 +8,7 @@ interface ArrowProps {
 }
 
 const Arrow: React.FC<ArrowProps> = ({ className, style, onClick, direction }) => {
-  const positionClass = direction === "next" ? "right-2" : "left-2 z-50 text-red-900";
+  const positionClass = direction === "next" ? "right-2" : "left-2 z-10";
   return (
     <div
       className={`${className} ${positionClass}`}
