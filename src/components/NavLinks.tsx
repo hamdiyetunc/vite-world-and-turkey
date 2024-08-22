@@ -10,10 +10,10 @@ interface NavLinksProps {
 }
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
-  // Dil bağlamını al
+  // Get language context
   const { language } = useContext(LanguageContext);
 
-  // Çeviri içeriğini seç
+  // Select translation content
   const navContent = content.header[language];
 
   return (
@@ -29,9 +29,17 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
       }`}
     >
       <LinkButton to="/" label={navContent.home} onClick={onLinkClick} />
-      <LinkButton to="/aboutus" label={navContent.aboutUs} onClick={onLinkClick} />
-      <LinkButton to="/contact" label={navContent.contact} onClick={onLinkClick} />
-      
+      <LinkButton
+        to="/aboutus"
+        label={navContent.aboutUs}
+        onClick={onLinkClick}
+      />
+      <LinkButton
+        to="/contact"
+        label={navContent.contact}
+        onClick={onLinkClick}
+      />
+
       <DropdownMenu
         label={navContent.services}
         links={[

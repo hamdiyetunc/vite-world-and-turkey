@@ -44,7 +44,10 @@ const Header: React.FC = () => {
         <Logo className="hidden md:flex items-center mb-4 md:mb-0" />
 
         {/* Menu */}
-        <NavLinks isMenuOpen={isMenuOpen} onLinkClick={() => setIsMenuOpen(false)} />
+        <NavLinks
+          isMenuOpen={isMenuOpen}
+          onLinkClick={() => setIsMenuOpen(false)}
+        />
 
         {/* Language Selector (Desktop) */}
         <div className="hidden md:block mt-4 md:mt-0">
@@ -61,7 +64,10 @@ const Header: React.FC = () => {
           <div className="absolute text-white top-9 left-6 z-50">
             <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
           </div>
-          <NavLinks isMenuOpen={isMenuOpen} onLinkClick={() => setIsMenuOpen(false)} />
+          <NavLinks
+            isMenuOpen={isMenuOpen}
+            onLinkClick={() => setIsMenuOpen(false)}
+          />
         </div>
       )}
     </header>
