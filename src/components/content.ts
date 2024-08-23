@@ -1,4 +1,4 @@
-export type Language = "tr" | "en" | "ar" | "ru";
+export type Language = "tr" | "en" | "ar" | "ru" | "fr";
 
 export const content = {
   aboutUs: {
@@ -12,45 +12,67 @@ export const content = {
     },
     ar: {
       title: "من نحن؟ ماذا نفعل؟",
-      text: "تركيا، بفضل السياسات الحكومية الحكيمة، والاستثمارات الصحيحة في القطاع الخاص، والتكيف السريع مع التكنولوجيا المتطورة؛ أصبحت في مقدمة المجالات مثل التعليم والصحة والسياحة والاستثمار، وأصبحت علامة تجارية بارزة وجذابة، تتحول إلى مركز جذب.\n\nموقع بلادنا، الذي يبعد ٥ ساعات طيران عن ٦٦ دولة، وثرواتها الطبيعية، واختلافاتها الثقافية، واستضافتها للعديد من الحضارات، وسعيها لبناء جسر من التفاهم مع العالم، يدعم هذه الحالة.\n\nفي هذا السياق، كـ “World & Turkey”، نسعى في قطاع الخدمات برؤية مبتكرة، مع الالتزام بالنزاهة والثقة والصدق؛ لتحقيق أفضل خدمة وتقديمها إليكم بأفضل طريقة.\n\nبفريق محترف، ديناميكي وقوي؛ في مجالات “التعليم”، و”الصحة”، و”استشارات الاستثمار”، نواصل العمل على تلبية جميع احتياجاتكم بسرعة وبدقة، مع الحفاظ على رضا العملاء وفهم الخدمة الجيدة كأولوية قصوى."
-    },    
+      text: "تركيا، بفضل السياسات الحكومية الحكيمة، والاستثمارات الصحيحة في القطاع الخاص، والتكيف السريع مع التكنولوجيا المتطورة؛ أصبحت في مقدمة المجالات مثل التعليم والصحة والسياحة والاستثمار، وأصبحت علامة تجارية بارزة وجذابة، تتحول إلى مركز جذب.\n\nموقع بلادنا، الذي يبعد ٥ ساعات طيران عن ٦٦ دولة، وثرواتها الطبيعية، واختلافاتها الثقافية، واستضافتها للعديد من الحضارات، وسعيها لبناء جسر من التفاهم مع العالم، يدعم هذه الحالة.\n\nفي هذا السياق، كـ “World & Turkey”، نسعى في قطاع الخدمات برؤية مبتكرة، مع الالتزام بالنزاهة والثقة والصدق؛ لتحقيق أفضل خدمة وتقديمها إليكم بأفضل طريقة.\n\nبفريق محترف، ديناميكي وقوي؛ في مجالات “التعليم”، و”الصحة”، و”استشارات الاستثمار”، نواصل العمل على تلبية جميع احتياجاتكم بسرعة وبدقة، مع الحفاظ على رضا العملاء وفهم الخدمة الجيدة كأولوية قصوى.",
+    },
     ru: {
       title: "КТО МЫ? ЧТО МЫ ДЕЛАЕМ?",
       text: "Турция, благодаря разумной государственной политике, правильным инвестициям в частный сектор и быстрой адаптации к развивающимся технологиям; стала ведущей и пионерской страной в таких областях, как образование, здравоохранение, туризм и инвестиции, и превратилась в привлекательный центр. Расположение нашей страны, находящейся в 5 часах лета от 66 стран, её природные богатства, культурное разнообразие, гостеприимство множества цивилизаций и стремление построить мосты понимания с миром также поддерживает эту ситуацию. В этом контексте, как «World & Turkey», мы стремимся предоставить вам лучший сервис с честностью, доверием и искренностью, опираясь на инновационный подход в сфере услуг. С профессиональной, динамичной и сильной командой; в областях «Образование», «Здравоохранение» и «Инвестиционное консультирование», мы продолжаем наши усилия каждый день и каждый час, чтобы удовлетворить все ваши потребности самым быстрым и подходящим образом, приоритетизируя удовлетворение клиентов и качественное обслуживание.",
+    },
+    fr: {
+      title: "QUI SOMMES-NOUS? QUE FAISONS-NOUS?",
+      text: "La Turquie, grâce à des politiques d'État prudentes, des investissements corrects dans le secteur privé et une adaptation rapide aux technologies en développement; est devenue une valeur et une marque leader et pionnière dans de nombreux domaines tels que l'éducation, la santé, le tourisme et l'investissement, devenant un centre d'attraction. La proximité de notre pays, étant à une distance de vol de 5 heures de 66 pays, sa richesse naturelle, sa diversité culturelle, accueillant de nombreuses civilisations, et son objectif de construire des ponts de compréhension avec le monde soutiennent également cette situation. Dans ce contexte, en tant que “World & Turkey”, nous nous efforçons de vous offrir le meilleur service avec honnêteté, confiance et sincérité, basé sur une perspective innovante dans le secteur des services. Avec une équipe professionnelle, dynamique et forte; dans les domaines de l'éducation, de la santé et du conseil en investissement, nous continuons nos efforts chaque jour et à chaque heure pour répondre à tous vos besoins de la manière la plus rapide et la plus appropriée, en donnant la priorité à la satisfaction du client et à un service de haute qualité.",
     },
   },
   contact: {
     tr: {
       title: "İLETİŞİM",
       subtitle: "Bize Ulaşın",
-      nameLabel: "Adınız",
+      nameLabel: "Ad Soyad",
+      phoneLabel: "Telefon",
       emailLabel: "E-posta",
+      subjectLabel: "Başlık",
       messageLabel: "Mesajınız",
       submitButton: "Gönder",
     },
     en: {
       title: "CONTACT US",
       subtitle: "Get in Touch",
-      nameLabel: "Your Name",
+      nameLabel: "Name Surname",
+      phoneLabel: "Telephone",
       emailLabel: "Email",
+      subjectLabel: "Subject",
       messageLabel: "Your Message",
       submitButton: "Submit",
     },
     ar: {
       title: "اتصل بنا",
       subtitle: "اتصل بنا",
-      nameLabel: "اسمك",
+      nameLabel: "الاسم اللقب",
+      phoneLabel: "هاتف",
       emailLabel: "البريد الإلكتروني",
+      subjectLabel: "عنوان الموضوع",
       messageLabel: "رسالتك",
       submitButton: "إرسال",
     },
     ru: {
       title: "КОНТАКТ",
       subtitle: "Свяжитесь с нами",
-      nameLabel: "Ваше имя",
+      nameLabel: "Имя Фамилия",
+      phoneLabel: "Телефон",
       emailLabel: "Электронная почта",
+      subjectLabel: "Название темы",
       messageLabel: "Ваше сообщение",
       submitButton: "Отправить",
+    },
+    fr: {
+      title: "CONTACTEZ-NOUS",
+      subtitle: "Prenez contact",
+      nameLabel: "Nom Prénom",
+      phoneLabel: "Téléphone",
+      emailLabel: "E-mail",
+      subjectLabel: "Sujet",
+      messageLabel: "Votre Message",
+      submitButton: "Envoyer",
     },
   },
   home: {
@@ -69,6 +91,10 @@ export const content = {
     ru: {
       title: "World and Turkey",
       subtitle: "Добро пожаловать в мир привилегий.",
+    },
+    fr: {
+      title: "World and Turkey",
+      subtitle: "Bienvenue dans le Monde des Privilèges.",
     },
   },
   partners: {
@@ -96,6 +122,12 @@ export const content = {
       education: "Образование",
       realty: "Недвижимость",
     },
+    fr: {
+      title: "Nos Partenaires",
+      health: "Santé",
+      education: "Éducation",
+      realty: "Immobilier",
+    },
   },
   AboutUsSection: {
     tr: {
@@ -114,6 +146,10 @@ export const content = {
       title: "КТО МЫ? ЧТО МЫ ДЕЛАЕМ?",
       text: "С профессиональной, динамичной и сильной командой, работающей с нами; в областях «Образование», «Здравоохранение» и «Консультирование по инвестициям», мы продолжаем работать каждый день, каждый час, чтобы удовлетворить все ваши потребности самым быстрым и подходящим образом, ставя на первое место удовлетворенность клиентов и качественное обслуживание.",
     },
+    fr: {
+      title: "QUI SOMMES-NOUS? QUE FAISONS-NOUS?",
+      text: "Avec une équipe professionnelle, dynamique et forte travaillant avec nous; dans les domaines de l'éducation, de la santé et du conseil en investissement, nous continuons à travailler chaque jour, chaque heure pour répondre à tous vos besoins de la manière la plus rapide et la plus appropriée, en donnant la priorité à la satisfaction du client et à une compréhension de service de qualité avant tout.",
+    },
   },
   AboutUsSectionBtn: {
     tr: {
@@ -127,6 +163,9 @@ export const content = {
     },
     ru: {
       title: "Читать далее",
+    },
+    fr: {
+      title: "Lire Plus",
     },
   },
   header: {
@@ -154,6 +193,12 @@ export const content = {
       contact: "КОНТАКТ",
       services: "НАШИ УСЛУГИ",
     },
+    fr: {
+      home: "ACCUEIL",
+      aboutUs: "À PROPOS",
+      contact: "CONTACT",
+      services: "SERVICES",
+    },
   },
   footer: {
     tr: {
@@ -168,11 +213,15 @@ export const content = {
     ru: {
       text: "World And Turkey. Все Права Защищены.",
     },
+    fr: {
+      text: "World And Turkey. Tous Droits Réservés.",
+    },
   },
   languageSelector: {
     tr: "Diller",
     en: "Languages",
     ar: "اللغات",
     ru: "Языки",
+    fr: "Langues",
   },
 };

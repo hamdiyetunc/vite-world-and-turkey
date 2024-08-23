@@ -16,36 +16,32 @@ const AboutUs: React.FC = () => {
       <div
         className={`container mx-auto flex flex-col md:flex-row items-center ${
           isRtl ? "md:flex-row-reverse" : "md:flex-row"
-        } md:items-start md:justify-between`}
+        } md:justify-center`}
       >
         {/* Text Section */}
         <div
-          className={`md:w-1/2 mb-8 md:mb-0 ${
-            isRtl ? "md:mr-0 md:ml-6" : "md:mr-6"
+          className={`md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center ${
+            isRtl ? "md:ml-6" : "md:mr-6"
           }`}
         >
           <h2
-            className={`text-[#134069] text-2xl md:text-3xl font-semibold mb-4 ${
-              isRtl ? "text-right" : "text-left"
-            }`}
+            className={`text-[#134069] text-2xl md:text-3xl font-semibold mb-4`}
           >
             {title}
           </h2>
-          <p
-            className="text-md md:text-xl"
-          >
+          <p className="text-md md:text-xl">
             {text}
           </p>
         </div>
 
         {/* Image Section */}
         <div
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center items-center"
         >
           <img
             src="../src/assets/about-us.jpg"
             alt="About Us"
-            className="w-full max-w-full md:max-w-[600px] h-auto object-cover rounded-lg"
+            className="w-full max-w-full md:max-w-[700px] h-auto object-cover rounded-lg"
           />
         </div>
       </div>

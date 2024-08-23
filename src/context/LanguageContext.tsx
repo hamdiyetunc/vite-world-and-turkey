@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode, useContext } from "react";
 
-type Language = "tr" | "en" | "ar" | "ru";
+type Language = "tr" | "en" | "ar" | "ru" | "fr";
 
 interface LanguageContextProps {
   language: Language;
@@ -8,7 +8,7 @@ interface LanguageContextProps {
 }
 
 export const LanguageContext = createContext<LanguageContextProps>({
-  language: "tr", // Varsayılan dil
+  language: "tr",
   setLanguage: () => {},
 });
 

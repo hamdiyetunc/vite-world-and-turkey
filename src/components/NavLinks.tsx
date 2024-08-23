@@ -34,7 +34,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.services}
         links={[
           { to: "/health", label: content.partners[language].health },
-          { to: "/education", label: content.partners[language].education },
+          { to: "https://www.edutema.com/", label: content.partners[language].education },
           { to: "/realestate", label: content.partners[language].realty },
         ]}
         onLinkClick={onLinkClick}

@@ -4,6 +4,7 @@ import trFlag from "../assets/tr.png";
 import enFlag from "../assets/en.png";
 import saFlag from "../assets/sa.png";
 import ruFlag from "../assets/ru.png";
+import frFlag from "../assets/fr.png";
 import { content, Language } from "./content"; // Import content object
 
 const LanguageSelector: React.FC = () => {
@@ -56,21 +57,40 @@ const LanguageSelector: React.FC = () => {
       </button>
       {isLangMenuOpen && (
         <div className="absolute right-0 mt-2 top-full bg-[#275d9b] rounded-lg shadow-lg w-48">
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("tr")}>
+          <div
+            className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
+            onClick={() => changeLanguage("tr")}
+          >
             <img src={trFlag} alt="Türkçe" className="w-5 h-5 mr-2" />
             Türkçe
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("en")}>
+          <div
+            className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
+            onClick={() => changeLanguage("en")}
+          >
             <img src={enFlag} alt="İngilizce" className="w-5 h-5 mr-2" />
             English
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("ar")}>
+          <div
+            className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
+            onClick={() => changeLanguage("ar")}
+          >
             <img src={saFlag} alt="Arapça" className="w-5 h-5 mr-2" />
             العربية
           </div>
-          <div className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer" onClick={() => changeLanguage("ru")}>
+          <div
+            className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
+            onClick={() => changeLanguage("ru")}
+          >
             <img src={ruFlag} alt="Rusça" className="w-5 h-5 mr-2" />
             Русский
+          </div>
+          <div
+            className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
+            onClick={() => changeLanguage("fr")}
+          >
+            <img src={frFlag} alt="Fransızca" className="w-5 h-5 mr-2" />
+            Français
           </div>
         </div>
       )}
