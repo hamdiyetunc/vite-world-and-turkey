@@ -79,7 +79,7 @@ export const content = {
       realty: "Gayrimenkul",
     },
     en: {
-      title: "Our Partners",
+      title: "Our Affiliates",
       health: "Health",
       education: "Education",
       realty: "Real Estate",

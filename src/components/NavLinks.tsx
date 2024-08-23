@@ -29,16 +29,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
       }`}
     >
       <LinkButton to="/" label={navContent.home} onClick={onLinkClick} />
-      <LinkButton
-        to="/aboutus"
-        label={navContent.aboutUs}
-        onClick={onLinkClick}
-      />
-      <LinkButton
-        to="/contact"
-        label={navContent.contact}
-        onClick={onLinkClick}
-      />
 
       <DropdownMenu
         label={navContent.services}
@@ -48,6 +38,17 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
           { to: "/realestate", label: content.partners[language].realty },
         ]}
         onLinkClick={onLinkClick}
+      />
+      <LinkButton
+        to="/aboutus"
+        label={navContent.aboutUs}
+        onClick={onLinkClick}
+      />
+
+      <LinkButton
+        to="/contact"
+        label={navContent.contact}
+        onClick={onLinkClick}
       />
     </nav>
   );
