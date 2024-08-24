@@ -28,7 +28,7 @@ const AboutUsSection: React.FC = () => {
           isRtl ? "md:items-end text-right" : "md:items-start text-left"
         } max-w-xl`}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#134069]">
           {content.AboutUsSection[language as Language].title}
         </h2>
         <p className="text-md md:text-xl mb-6">

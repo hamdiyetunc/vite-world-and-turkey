@@ -166,8 +166,8 @@ const Contact: React.FC = () => {
             <h4 className="font-semibold mb-2">
               {content.info[language as Language].telephone}
             </h4>
-            <p>+90 551 730 88 33</p>
-            <p>+90 507 441 53 00</p>
+            <p>+90 216 343 51 58</p>
+            <p>+90 216 343 51 57</p>
           </div>
           <div
             className={`p-4 bg-white shadow-lg rounded-lg ${
