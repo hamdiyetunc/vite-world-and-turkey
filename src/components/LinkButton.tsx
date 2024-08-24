@@ -7,18 +7,17 @@ interface LinkButtonProps {
   onClick: () => void;
   isActive?: boolean;
   className?: string;
-  textTransform?: string; // New prop for text transformation
+  textTransform?: string;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ to, label, onClick, isActive, className, textTransform }) => {
   // Define the classes with conditional active styling
   const classes = `mb-4 md:mb-0 md:mr-4 px-4 py-2 rounded-full text-center transition-all duration-300 ease-in-out ${
     isActive
-      ? "bg-[#275d9b] text-white"  // Active link styling
-      : "hover:bg-[#275d9b] hover:text-white"  // Hover styling
+      ? "bg-[#275d9b] text-white"
+      : "hover:bg-[#275d9b] hover:text-white"
   } ${textTransform ? `uppercase ${textTransform}` : ""} ${className ? className : ""}`;
 
-  // Render Link or button based on the 'to' prop
   return to ? (
     <Link to={to} onClick={onClick} className={classes}>
       {label}

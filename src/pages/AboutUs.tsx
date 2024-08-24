@@ -18,7 +18,6 @@ const AboutUs: React.FC = () => {
           isRtl ? "md:flex-row-reverse" : "md:flex-row"
         } md:justify-center`}
       >
-        {/* Text Section */}
         <div
           className={`md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center ${
             isRtl ? "md:ml-6" : "md:mr-6"
@@ -29,15 +28,10 @@ const AboutUs: React.FC = () => {
           >
             {title}
           </h2>
-          <p className="text-md md:text-xl">
-            {text}
-          </p>
+          <p className="text-md md:text-xl">{text}</p>
         </div>
 
-        {/* Image Section */}
-        <div
-          className="md:w-1/2 flex justify-center items-center"
-        >
+        <div className="md:w-1/2 flex justify-center items-center">
           <img
             src="../src/assets/about-us.jpg"
             alt="About Us"

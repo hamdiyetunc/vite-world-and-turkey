@@ -332,11 +332,26 @@ export const content = {
       text: "World And Turkey. Tous Droits Réservés.",
     },
   },
-  languageSelector: {
-    tr: "Diller",
-    en: "Languages",
-    ar: "اللغات",
-    ru: "Языки",
-    fr: "Langues",
+  notfound: {
+    tr: {
+      title: "Sayfa Bulunamadı",
+      button: "Ana Sayfaya Dön",
+    },
+    en: {
+      title: "Page Not Found",
+      button: "Go to Home",
+    },
+    ar: {
+      title: "الصفحة غير موجودة",
+      button: "الذهاب إلى الصفحة الرئيسية",
+    },
+    ru: {
+      title: "Страница не найдена",
+      button: "На главную",
+    },
+    fr: {
+      title: "Page Non Trouvée",
+      button: "Retour à l'Accueil",
+    },
   },
 };

@@ -11,11 +11,8 @@ interface NavLinksProps {
 }
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
-  // Get language context
   const { language } = useContext(LanguageContext);
   const location = useLocation(); // Get current URL location
-
-  // Select translation content
   const navContent = content.header[language];
 
   // Function to add language parameter to URL
@@ -45,28 +42,28 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.home}
         onClick={onLinkClick}
         isActive={isActive("/")}
-        textTransform="uppercase" // Apply uppercase transformation
+        textTransform="uppercase"
       />
 
       {isMenuOpen ? (
-        <div className="flex flex-col items-center"> {/* Increased space between items */}
+        <div className="flex flex-col items-center">
           <LinkButton
             to={addLangParam("/health")}
             label={content.partners[language].health}
             onClick={onLinkClick}
-            textTransform="uppercase" // Apply uppercase transformation
+            textTransform="uppercase"
           />
           <LinkButton
             to="https://www.edutema.com/"
             label={content.partners[language].education}
             onClick={onLinkClick}
-            textTransform="uppercase" // Apply uppercase transformation
+            textTransform="uppercase"
           />
           <LinkButton
             to={addLangParam("/realestate")}
             label={content.partners[language].realty}
             onClick={onLinkClick}
-            textTransform="uppercase" // Apply uppercase transformation
+            textTransform="uppercase"
           />
         </div>
       ) : (
@@ -86,7 +83,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.aboutUs}
         onClick={onLinkClick}
         isActive={isActive("/aboutus")}
-        textTransform="uppercase" // Apply uppercase transformation
+        textTransform="uppercase"
       />
 
       <LinkButton
@@ -94,7 +91,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.contact}
         onClick={onLinkClick}
         isActive={isActive("/contact")}
-        textTransform="uppercase" // Apply uppercase transformation
+        textTransform="uppercase"
       />
     </nav>
   );

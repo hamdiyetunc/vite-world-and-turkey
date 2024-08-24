@@ -8,7 +8,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 const SliderComponent: React.FC = () => {
   const { language } = useLanguage();
-  const textAlignClass = 'text-left';
+  const textAlignClass = "text-left";
 
   const settings = {
     infinite: true,
@@ -29,7 +29,9 @@ const SliderComponent: React.FC = () => {
           alt="Slider 1"
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
-        <div className={`absolute inset-0 flex flex-col ${textAlignClass} justify-center text-center`}>
+        <div
+          className={`absolute inset-0 flex flex-col ${textAlignClass} justify-center text-center`}
+        >
           <h1 className="text-white text-shadow-lg text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             {content.sliders[language as Language].title}
             <br />

@@ -6,7 +6,7 @@ import { content, Language } from "./content";
 const AboutUsSection: React.FC = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
-  const isRtl = language === "ar"; // RTL control
+  const isRtl = language === "ar";
 
   const handleClick = () => {
     navigate("/aboutus");
