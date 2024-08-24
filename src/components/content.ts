@@ -75,6 +75,50 @@ export const content = {
       submitButton: "Envoyer",
     },
   },
+  maplink: {
+    tr: {
+      link: "Google Haritalar'da Görüntüle",
+    },
+    en: {
+      link: "View on Google Maps",
+    },
+    ar: {
+      link: "عرض على خرائط جوجل",
+    },
+    ru: {
+      link: "Просмотреть на Google Картах",
+    },
+    fr: {
+      link: "Voir sur Google Maps",
+    },
+  },
+  info: {
+    tr: {
+      address: "Adres:",
+      telephone: "Telefon:",
+      email: "E-posta:",
+    },
+    en: {
+      address: "Address:",
+      telephone: "Telephone:",
+      email: "E-mail:",
+    },
+    ar: {
+      address: ":العنوان",
+      telephone: ":الهاتف",
+      email: ":البريد الإلكتروني",
+    },
+    ru: {
+      address: "Адрес:",
+      telephone: "Телефон:",
+      email: "Электронная почта:",
+    },
+    fr: {
+      address: "Adresse:",
+      telephone: "Téléphone:",
+      email: "E-mail:",
+    },
+  },
   home: {
     tr: {
       title: "World and Turkey",

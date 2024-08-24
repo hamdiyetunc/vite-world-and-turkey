@@ -1,7 +1,7 @@
 import React from "react";
 import SliderComponent from "../components/SliderComponent";
 import AboutUsSection from "../components/AboutUsSection";
-import PartnersSection from "../components/PartnersSection";
+import AffiliatesSection from "../components/AffiliatesSection";
 import { useLanguage } from "../context/LanguageContext";
 import { content, Language } from "../components/content";
 
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
           <p className="text-lg">{subtitle}</p>
         </div>
         <AboutUsSection />
-        <PartnersSection />
+        <AffiliatesSection />
       </div>
     </main>
   );

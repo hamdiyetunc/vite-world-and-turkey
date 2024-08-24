@@ -140,25 +140,43 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="block mt-4 text-blue-500 hover:underline text-center"
             >
-              Google Haritalar'da Görüntüle
+              {content.maplink[language as Language].link}
             </a>
           </div>
         </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          <div className="p-4 bg-white shadow-lg rounded-lg text-left">
-            <h4 className="font-semibold mb-2">Address:</h4>
+          <div
+            className={`p-4 bg-white shadow-lg rounded-lg ${
+              isRtl ? "text-right" : "text-left"
+            }`}
+          >
+            <h4 className="font-semibold mb-2">
+              {content.info[language as Language].address}
+            </h4>
             <p>
               Head Office: Aziz Mahmut Hüdayi, Öğdül Sk. No:42, 34672
               Üsküdar/İstanbul
             </p>
           </div>
-          <div className="p-4 bg-white shadow-lg rounded-lg text-left">
-            <h4 className="font-semibold mb-2">Telephone:</h4>
+          <div
+            className={`p-4 bg-white shadow-lg rounded-lg ${
+              isRtl ? "text-right" : "text-left"
+            }`}
+          >
+            <h4 className="font-semibold mb-2">
+              {content.info[language as Language].telephone}
+            </h4>
             <p>+90 551 730 88 33</p>
             <p>+90 507 441 53 00</p>
           </div>
-          <div className="p-4 bg-white shadow-lg rounded-lg text-left">
-            <h4 className="font-semibold mb-2">E-mail:</h4>
+          <div
+            className={`p-4 bg-white shadow-lg rounded-lg ${
+              isRtl ? "text-right" : "text-left"
+            }`}
+          >
+            <h4 className="font-semibold mb-2">
+              {content.info[language as Language].email}
+            </h4>
             <p>info@worldandturkey.com</p>
             <p>sales@worldandturkey.com</p>
           </div>

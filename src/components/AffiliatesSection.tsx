@@ -2,7 +2,7 @@ import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { content, Language } from "./content";
 
-const PartnersSection: React.FC = () => {
+const AffiliatesSection: React.FC = () => {
   const { language } = useLanguage();
   const { health, education, realty } = content.partners[language as Language];
 
@@ -23,7 +23,7 @@ const PartnersSection: React.FC = () => {
           />
           <a
             href="/health"
-            className="text-gray-600 mb-4 hover:underline text-lg"
+            className="text-gray-600 mb-4 hover:underline text-xl"
           >
             {health}
           </a>
@@ -35,8 +35,8 @@ const PartnersSection: React.FC = () => {
             className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
           />
           <a
-            href="/education"
-            className="text-gray-600 mb-4 hover:underline text-lg"
+            href="https://www.edutema.com/"
+            className="text-gray-600 mb-4 hover:underline text-xl"
           >
             {education}
           </a>
@@ -44,12 +44,12 @@ const PartnersSection: React.FC = () => {
         <div className="flex flex-col items-center">
           <img
             src="../src/assets/wt_realty.jpg"
-            alt="İnşaat"
+            alt="Gayrimenkul"
             className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
           />
           <a
             href="/realty"
-            className="text-gray-600 mb-4 hover:underline text-lg"
+            className="text-gray-600 mb-4 hover:underline text-xl"
           >
             {realty}
           </a>
@@ -59,4 +59,4 @@ const PartnersSection: React.FC = () => {
   );
 };
 
-export default PartnersSection;
+export default AffiliatesSection;
