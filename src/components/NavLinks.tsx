@@ -45,22 +45,48 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.home}
         onClick={onLinkClick}
         isActive={isActive("/")}
+        textTransform="uppercase" // Apply uppercase transformation
       />
 
-      <DropdownMenu
-        label={navContent.services}
-        links={[
-          { to: addLangParam("/health"), label: content.partners[language].health },
-          { to: "https://www.edutema.com/", label: content.partners[language].education },
-          { to: addLangParam("/realestate"), label: content.partners[language].realty },
-        ]}
-        onLinkClick={onLinkClick}
-      />
+      {isMenuOpen ? (
+        <div className="flex flex-col items-center"> {/* Increased space between items */}
+          <LinkButton
+            to={addLangParam("/health")}
+            label={content.partners[language].health}
+            onClick={onLinkClick}
+            textTransform="uppercase" // Apply uppercase transformation
+          />
+          <LinkButton
+            to="https://www.edutema.com/"
+            label={content.partners[language].education}
+            onClick={onLinkClick}
+            textTransform="uppercase" // Apply uppercase transformation
+          />
+          <LinkButton
+            to={addLangParam("/realestate")}
+            label={content.partners[language].realty}
+            onClick={onLinkClick}
+            textTransform="uppercase" // Apply uppercase transformation
+          />
+        </div>
+      ) : (
+        <DropdownMenu
+          label={navContent.services}
+          links={[
+            { to: addLangParam("/health"), label: content.partners[language].health },
+            { to: "https://www.edutema.com/", label: content.partners[language].education },
+            { to: addLangParam("/realestate"), label: content.partners[language].realty },
+          ]}
+          onLinkClick={onLinkClick}
+        />
+      )}
+
       <LinkButton
         to={addLangParam("/aboutus")}
         label={navContent.aboutUs}
         onClick={onLinkClick}
         isActive={isActive("/aboutus")}
+        textTransform="uppercase" // Apply uppercase transformation
       />
 
       <LinkButton
@@ -68,6 +94,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMenuOpen, onLinkClick }) => {
         label={navContent.contact}
         onClick={onLinkClick}
         isActive={isActive("/contact")}
+        textTransform="uppercase" // Apply uppercase transformation
       />
     </nav>
   );

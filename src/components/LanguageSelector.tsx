@@ -37,11 +37,36 @@ const LanguageSelector: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <button className="flex items-center px-4 py-2 mt-4 md:mt-0 rounded border">
-        {language === "tr" && "Türkçe"}
-        {language === "en" && "English"}
-        {language === "ar" && "العربية"}
-        {language === "ru" && "Русский"}
-        {language === "fr" && "Français"}
+        {language === "tr" && (
+          <div className="flex items-center">
+            <img src={trFlag} alt="Türkçe" className="w-5 h-5" />
+            <span className="ml-2">TR</span>
+          </div>
+        )}
+        {language === "en" && (
+          <div className="flex items-center">
+            <img src={enFlag} alt="English" className="w-5 h-5" />
+            <span className="ml-2">EN</span>
+          </div>
+        )}
+        {language === "ar" && (
+          <div className="flex items-center">
+            <img src={saFlag} alt="العربية" className="w-5 h-5" />
+            <span className="ml-2">AR</span>
+          </div>
+        )}
+        {language === "ru" && (
+          <div className="flex items-center">
+            <img src={ruFlag} alt="Русский" className="w-5 h-5" />
+            <span className="ml-2">RU</span>
+          </div>
+        )}
+        {language === "fr" && (
+          <div className="flex items-center">
+            <img src={frFlag} alt="Français" className="w-5 h-5" />
+            <span className="ml-2">FR</span>
+          </div>
+        )}
         <svg
           className={`w-5 h-5 ml-2 transition-transform ${
             isLangMenuOpen ? "rotate-180" : ""
@@ -59,6 +84,7 @@ const LanguageSelector: React.FC = () => {
           />
         </svg>
       </button>
+
       {isLangMenuOpen && (
         <div className="absolute right-0 mt-2 top-full bg-[#275d9b] rounded-lg shadow-lg w-48">
           <div

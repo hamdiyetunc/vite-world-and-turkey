@@ -1,6 +1,33 @@
 export type Language = "tr" | "en" | "ar" | "ru" | "fr";
 
 export const content = {
+  sliders: {
+    tr: {
+      title: "Ayrıcalıklar Dünyasına",
+      subtitle: "Hoş Geldiniz",
+      description: "Evinizde gibi hissedeceksiniz.",
+    },
+    en: {
+      title: "Welcome to the",
+      subtitle: "World of Privileges",
+      description: "You will feel like you are at home.",
+    },
+    ar: {
+      title: "مرحبًا بك في",
+      subtitle: "عالم الامتيازات",
+      description: "سوف تشعر وكأنك في منزلك.",
+    },
+    ru: {
+      title: "Добро пожаловать в",
+      subtitle: "Мир Привилегий",
+      description: "Вы почувствуете себя как дома.",
+    },
+    fr: {
+      title: "Bienvenue dans le",
+      subtitle: "Monde des Privilèges",
+      description: "Vous vous sentirez comme chez vous.",
+    },
+  },
   health: {
     tr: {
       title: "Sağlık Danışmanlığı:",
