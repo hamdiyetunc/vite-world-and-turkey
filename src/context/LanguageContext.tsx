@@ -15,17 +15,17 @@ interface LanguageContextProps {
 }
 
 export const LanguageContext = createContext<LanguageContextProps>({
-  language: "tr",
+  language: "en",
   setLanguage: () => {},
 });
+
+const initLang =
+  (new URLSearchParams(window.location.search).get("lang") as Language) || "en";
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const searchParams = new URLSearchParams(window.location.search) as any;
-  const [language, setLanguage] = useState<Language>(
-    searchParams.get("lang") || "ar"
-  );
+  const [language, setLanguage] = useState<Language>(initLang);
   const navigator = useNavigate();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
     if (selectedLang && ["tr", "en", "ar", "ru", "fr"].includes(selectedLang)) {
       return;
     }
-    setLanguage("tr");
+    setLanguage("en");
   }, []);
 
   useEffect(() => {
