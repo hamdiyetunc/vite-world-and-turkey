@@ -9,8 +9,8 @@ import { LanguageProvider } from "./context/LanguageContext";
 
 const App: React.FC = () => {
   return (
-    <LanguageProvider>
-      <Router>
+    <Router>
+      <LanguageProvider>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
@@ -22,8 +22,8 @@ const App: React.FC = () => {
           </main>
           <Footer />
         </div>
-      </Router>
-    </LanguageProvider>
+      </LanguageProvider>
+    </Router>
   );
 };
 

@@ -5,11 +5,11 @@ import enFlag from "../assets/en.png";
 import saFlag from "../assets/sa.png";
 import ruFlag from "../assets/ru.png";
 import frFlag from "../assets/fr.png";
-import { content, Language } from "./content"; // Import content object
+import { Language } from "./content";
 
 const LanguageSelector: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const { setLanguage, language } = useLanguage(); // Get current language
+  const { setLanguage, language } = useLanguage();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
@@ -37,7 +37,11 @@ const LanguageSelector: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <button className="flex items-center px-4 py-2 mt-4 md:mt-0 rounded border">
-        {content.languageSelector[language]}
+        {language === "tr" && "Türkçe"}
+        {language === "en" && "English"}
+        {language === "ar" && "العربية"}
+        {language === "ru" && "Русский"}
+        {language === "fr" && "Français"}
         <svg
           className={`w-5 h-5 ml-2 transition-transform ${
             isLangMenuOpen ? "rotate-180" : ""
