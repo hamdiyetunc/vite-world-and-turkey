@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
-import { content } from "./content";
-
-type Language = 'tr' | 'en' | 'ar' | 'ru';
+import { footer } from "../contents/footer";
+import { Language } from "../contents/types";
 
 const Footer: React.FC = () => {
   const { language } = useContext(LanguageContext);
 
   // Check if the language is a valid key in the content.footer
-  const footerText = content.footer[language as Language]?.text || "Default text";
+  const footerText = footer[language as Language]?.text || "Default text";
 
   return (
     <footer className="bg-[#134069] text-white py-4">

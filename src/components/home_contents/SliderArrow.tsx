@@ -7,7 +7,7 @@ interface ArrowProps {
   direction: "next" | "prev";
 }
 
-const Arrow: React.FC<ArrowProps> = ({ className, style, onClick, direction }) => {
+const SliderArrow: React.FC<ArrowProps> = ({ className, style, onClick, direction }) => {
   const positionClass = direction === "next" ? "right-2" : "left-2 z-10";
   return (
     <div
@@ -22,4 +22,4 @@ const Arrow: React.FC<ArrowProps> = ({ className, style, onClick, direction }) =
   );
 };
 
-export default Arrow;
+export default SliderArrow;

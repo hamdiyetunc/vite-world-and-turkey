@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useLanguage } from "../context/LanguageContext";
-import { content, Language } from "../components/content";
+import { contactContent, Language } from "../contents/contact";
 
 const Contact: React.FC = () => {
   const { language } = useLanguage();
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
     <section className="mt-10 py-8 px-4 md:px-8">
       <div className="container mx-auto">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">
-          {content.contact[language as Language].title}
+          {contactContent.contact[language as Language].title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
             }`}
           >
             <h3 className="text-xl font-semibold mb-4">
-              {content.contact[language as Language].subtitle}
+              {contactContent.contact[language as Language].subtitle}
             </h3>
             <form
               onSubmit={handleSubmit}
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             >
               <label htmlFor="name" className="flex flex-col w-full">
                 <span className="text-gray-600">
-                  {content.contact[language as Language].nameLabel}
+                  {contactContent.contact[language as Language].nameLabel}
                 </span>
                 <input
                   type="text"
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
               </label>
               <label htmlFor="phone" className="flex flex-col w-full">
                 <span className="text-gray-600">
-                  {content.contact[language as Language].phoneLabel}
+                  {contactContent.contact[language as Language].phoneLabel}
                 </span>
                 <input
                   type="tel"
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
               </label>
               <label htmlFor="email" className="flex flex-col w-full">
                 <span className="text-gray-600">
-                  {content.contact[language as Language].emailLabel}
+                  {contactContent.contact[language as Language].emailLabel}
                 </span>
                 <input
                   type="email"
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
               </label>
               <label htmlFor="subject" className="flex flex-col w-full">
                 <span className="text-gray-600">
-                  {content.contact[language as Language].subjectLabel}
+                  {contactContent.contact[language as Language].subjectLabel}
                 </span>
                 <input
                   type="text"
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
               </label>
               <label htmlFor="message" className="flex flex-col w-full">
                 <span className="text-gray-600">
-                  {content.contact[language as Language].messageLabel}
+                  {contactContent.contact[language as Language].messageLabel}
                 </span>
                 <textarea
                   id="message"
@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
                   isRtl ? "self-end" : "self-start"
                 }`}
               >
-                {content.contact[language as Language].submitButton}
+                {contactContent.contact[language as Language].submitButton}
               </button>
             </form>
           </div>
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="block mt-4 text-blue-500 hover:underline text-center"
             >
-              {content.maplink[language as Language].link}
+              {contactContent.maplink[language as Language].link}
             </a>
           </div>
         </div>
@@ -151,7 +151,7 @@ const Contact: React.FC = () => {
             }`}
           >
             <h4 className="font-semibold mb-2">
-              {content.info[language as Language].address}
+              {contactContent.info[language as Language].address}
             </h4>
             <p>
               Head Office: Aziz Mahmut Hüdayi, Öğdül Sk. No:42, 34672
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
             }`}
           >
             <h4 className="font-semibold mb-2">
-              {content.info[language as Language].telephone}
+              {contactContent.info[language as Language].telephone}
             </h4>
             <p>+90 216 343 51 58</p>
             <p>+90 216 343 51 57</p>
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
             }`}
           >
             <h4 className="font-semibold mb-2">
-              {content.info[language as Language].email}
+              {contactContent.info[language as Language].email}
             </h4>
             <p>info@worldandturkey.com</p>
             <p>sales@worldandturkey.com</p>

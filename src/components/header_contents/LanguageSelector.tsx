@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
-import { useLanguage } from "../context/LanguageContext";
-import trFlag from "../assets/tr.png";
-import enFlag from "../assets/en.png";
-import saFlag from "../assets/sa.png";
-import ruFlag from "../assets/ru.png";
-import frFlag from "../assets/fr.png";
-import { Language } from "./content";
+import { useLanguage } from "../../context/LanguageContext";
+import trFlag from "../../assets/tr.png";
+import enFlag from "../../assets/en.png";
+import arFlag from "../../assets/ar.png";
+import ruFlag from "../../assets/ru.png";
+import frFlag from "../../assets/fr.png";
+import { Language } from "../../contents/types";
 
 const LanguageSelector: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -51,7 +51,7 @@ const LanguageSelector: React.FC = () => {
         )}
         {language === "ar" && (
           <div className="flex items-center">
-            <img src={saFlag} alt="العربية" className="w-5 h-5" />
+            <img src={arFlag} alt="العربية" className="w-5 h-5" />
             <span className="ml-2">AR</span>
           </div>
         )}
@@ -105,7 +105,7 @@ const LanguageSelector: React.FC = () => {
             className="flex items-center px-4 py-2 hover:bg-[#134069] cursor-pointer"
             onClick={() => changeLanguage("ar")}
           >
-            <img src={saFlag} alt="Arapça" className="w-5 h-5 mr-2" />
+            <img src={arFlag} alt="Arapça" className="w-5 h-5 mr-2" />
             العربية
           </div>
           <div

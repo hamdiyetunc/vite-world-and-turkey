@@ -9,7 +9,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => (
   <div className={className}>
     <Link to="/">
       <img
-        src="../src/assets/world-and-turkey-health-logo.png"
+        src="../src/assets/world-and-turkey-logo.png"
         alt="Logo"
         className="h-16"
       />

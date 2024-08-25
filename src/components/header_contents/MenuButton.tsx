@@ -1,12 +1,12 @@
 import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-interface HamburgerMenuProps {
+interface MenuButtonProps {
   isMenuOpen: boolean;
   toggleMenu: () => void;
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
+const MenuButton: React.FC<MenuButtonProps> = ({
   isMenuOpen,
   toggleMenu,
 }) => (
@@ -24,4 +24,4 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   </button>
 );
 
-export default HamburgerMenu;
+export default MenuButton;

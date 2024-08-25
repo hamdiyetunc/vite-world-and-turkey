@@ -1,10 +1,11 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { content, Language } from "../components/content";
+import { estate } from "../contents/estate";
+import { Language } from "../contents/types";
 
 const RealEstate: React.FC = () => {
   const { language } = useLanguage();
-  const { title, text } = content.estate[language as Language];
+  const { title, text } = estate[language as Language];
   const isRtl = language === "ar";
 
   return (

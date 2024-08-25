@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import { content } from "../components/content";
-import { Language } from "../components/content";
+import { notfound } from "../contents/notfound";
+import { Language } from "../contents/types";
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
@@ -16,13 +16,13 @@ const NotFound: React.FC = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-center">
       <h1 className="text-9xl text-gray-800 font-bold">404</h1>
       <h2 className="text-2xl font-medium text-gray-600 mt-4">
-        {content.notfound[language as Language].title}
+        {notfound[language as Language].title}
       </h2>
       <button
         onClick={handleGoHome}
         className="mt-6 px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
       >
-        {content.notfound[language as Language].button}
+        {notfound[language as Language].button}
       </button>
     </div>
   );

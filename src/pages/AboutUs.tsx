@@ -1,10 +1,11 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { content, Language } from "../components/content";
+import { aboutus } from "../contents/aboutus";
+import { Language } from "../contents/types";
 
 const AboutUs: React.FC = () => {
   const { language } = useLanguage();
-  const { title, text } = content.aboutUs[language as Language];
+  const { title, text } = aboutus[language as Language];
   const isRtl = language === "ar";
 
   return (

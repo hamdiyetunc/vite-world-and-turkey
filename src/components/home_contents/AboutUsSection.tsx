@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
-import { content, Language } from "./content";
+import { useLanguage } from "../../context/LanguageContext";
+import { homeContent, Language } from "../../contents/home";
 
 const AboutUsSection: React.FC = () => {
   const navigate = useNavigate();
@@ -29,16 +29,16 @@ const AboutUsSection: React.FC = () => {
         } max-w-xl`}
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-[#134069]">
-          {content.AboutUsSection[language as Language].title}
+          {homeContent.AboutUsSection[language as Language].title}
         </h2>
         <p className="text-md md:text-xl mb-6">
-          {content.AboutUsSection[language as Language].text}
+          {homeContent.AboutUsSection[language as Language].text}
         </p>
         <button
           className="bg-[#134069] text-white py-2 px-4 rounded hover:bg-[#275d9b]"
           onClick={handleClick}
         >
-          {content.AboutUsSectionBtn[language as Language].title}
+          {homeContent.AboutUsSectionBtn[language as Language].title}
         </button>
       </div>
     </div>
