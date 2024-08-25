@@ -5,7 +5,7 @@ import React, {
   useContext,
   useEffect,
 } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type Language = "tr" | "en" | "ar" | "ru" | "fr";
 
@@ -19,32 +19,28 @@ export const LanguageContext = createContext<LanguageContextProps>({
   setLanguage: () => {},
 });
 
-const initLang =
-  (new URLSearchParams(window.location.search).get("lang") as Language) || "en";
-
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>(initLang);
+  const location = useLocation();
   const navigator = useNavigate();
 
-  useEffect(() => {
-    const href = window.location.href;
-    const currURL = new URL(href);
-    const selectedLang = currURL.searchParams.get("lang") as Language;
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const initialLanguage = (pathSegments[0] as Language) || "en";
 
-    if (selectedLang && ["tr", "en", "ar", "ru", "fr"].includes(selectedLang)) {
-      return;
+  const [language, setLanguage] = useState<Language>(initialLanguage);
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/(tr|en|ar|ru|fr)/, "");
+
+    if (!["tr", "en", "ar", "ru", "fr"].includes(language)) {
+      setLanguage("en");
+      navigator(`/en${pathWithoutLang}`, { replace: true });
+    } else {
+      navigator(`/${language}${pathWithoutLang}`, { replace: true });
     }
-    setLanguage("en");
-  }, []);
-
-  useEffect(() => {
-    const href = window.location.href;
-    const currURL = new URL(href);
-
-    navigator(`${currURL.pathname}?lang=${language}`);
-  }, [language]);
+  }, [language, location.pathname]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
