@@ -1,23 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useLanguage } from "../context/LanguageContext";
 import { contactContent, Language } from "../contents/contact";
+import emailjs from "emailjs-com";
 
 const Contact: React.FC = () => {
   const { language } = useLanguage();
-  const isRtl = language === "ar"; // RTL control
-  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecaptchaValue(value);
-  };
+  const isRtl = language === "ar";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!recaptchaValue) {
-      alert("Please complete the reCAPTCHA.");
-      return;
-    }
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const data: { [key: string]: string } = {};
+    formData.forEach((value, key) => {
+      data[key] = value as string;
+    });
+    
+    emailjs
+      .send(
+        "service_4imu2um",
+        "template_6jtg7m6",
+        {
+          to_name: "World and Turkey Team",
+          from_name: data.name,
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "DV0wUQo59TIcg4ibc"
+      )
+      .then(
+        function (response) {
+          console.log("E-posta başarıyla gönderildi:", response);
+        },
+        function (error) {
+          console.log("E-posta gönderiminde hata oluştu:", error);
+        }
+      );
   };
 
   return (
@@ -111,11 +135,7 @@ const Contact: React.FC = () => {
                   required
                 ></textarea>
               </label>
-              <ReCAPTCHA
-                sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                onChange={handleRecaptchaChange}
-                className="mb-4"
-              />
+              <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" className="mb-4" />
               <button
                 type="submit"
                 className={`bg-[#134069] text-white py-2 px-4 rounded-md hover:bg-[#0d2b43] transition-colors ${
