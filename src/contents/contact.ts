@@ -97,4 +97,42 @@ export const contactContent = {
       email: "E-mail:",
     },
   },
+  modalmessage: {
+    message: {
+      tr: {
+        message: "Mesajınız Başarıyla Gönderildi!",
+      },
+      en: {
+        message: "Your message has been sent successfully!",
+      },
+      ar: {
+        message: "!تم إرسال رسالتك بنجاح",
+      },
+      ru: {
+        message: "Ваше сообщение успешно отправлено!",
+      },
+      fr: {
+        message: "Votre message a été envoyé avec succès!",
+      },
+    },
+  },
+  modalbtn: {
+    btn: {
+      tr: {
+        btn: "Kapat",
+      },
+      en: {
+        btn: "Close",
+      },
+      ar: {
+        btn: "إغلاق",
+      },
+      ru: {
+        btn: "Закрыть",
+      },
+      fr: {
+        btn: "Fermer",
+      },
+    },
+  },
 };

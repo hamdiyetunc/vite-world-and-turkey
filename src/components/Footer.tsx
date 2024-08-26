@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     { href: "https://www.facebook.com/people/World-and-Turkey/100068080773194/", icon: <FaFacebook />, label: "Facebook" },
     { href: "https://x.com/WorldAndTurkey", icon: <FaTwitter />, label: "Twitter" },
     { href: "https://www.instagram.com/world.and.turkey/", icon: <FaInstagram />, label: "Instagram" },
-    { href: "https://www.youtube.com/channel/UCa5PQCjeFgCZKjnuX7xF1zQ", icon: <FaYoutube />, label: "LinkedIn" },
+    { href: "https://www.youtube.com/channel/UCa5PQCjeFgCZKjnuX7xF1zQ", icon: <FaYoutube />, label: "YouTube" },
   ];
 
   return (
@@ -41,5 +41,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-// worldandturkey@gmail.com

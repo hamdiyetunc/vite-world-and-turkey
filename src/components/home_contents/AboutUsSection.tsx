@@ -19,7 +19,7 @@ const AboutUsSection: React.FC = () => {
       } md:space-x-32 px-4 md:px-0 space-y-6 md:space-y-0`}
     >
       <img
-        src="/assets/about-us.jpg"
+        src="../src/assets/about-us.jpg"
         alt="About Us"
         className="w-full max-w-full md:max-w-[600px] h-auto object-cover"
       />

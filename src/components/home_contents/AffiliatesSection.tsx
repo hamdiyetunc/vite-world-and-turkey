@@ -9,7 +9,7 @@ const AffiliatesSection: React.FC = () => {
     homeContent.partners[language as Language];
 
   return (
-    <div className="bg-[#acbefa] mt-14">
+    <div className="mt-14">
       <div className="p-4">
         <h2 className="text-gray-600 text-2xl md:text-3xl font-semibold mb-4 text-center">
           {homeContent.partners[language as Language].title}
