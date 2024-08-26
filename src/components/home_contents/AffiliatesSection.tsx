@@ -19,7 +19,7 @@ const AffiliatesSection: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-0">
         <div className="flex flex-col items-center">
           <img
-            src="../src/assets/wt_health.jpg"
+            src="/assets/wt_health.jpg"
             alt="Sağlık"
             className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
           />
@@ -32,7 +32,7 @@ const AffiliatesSection: React.FC = () => {
         </div>
         <div className="flex flex-col items-center">
           <img
-            src="../src/assets/wt_education.jpg"
+            src="/assets/wt_education.jpg"
             alt="Eğitim"
             className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
           />
@@ -45,7 +45,7 @@ const AffiliatesSection: React.FC = () => {
         </div>
         <div className="flex flex-col items-center">
           <img
-            src="../src/assets/wt_realty.jpg"
+            src="/assets/wt_realty.jpg"
             alt="Gayrimenkul"
             className="w-full max-w-[300px] sm:max-w-[450px] md:max-w-[550px] h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-2"
           />

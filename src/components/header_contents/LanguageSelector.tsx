@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import { useLanguage } from "../../context/LanguageContext";
-import trFlag from "../../assets/tr.png";
-import enFlag from "../../assets/en.png";
-import arFlag from "../../assets/ar.png";
-import ruFlag from "../../assets/ru.png";
-import frFlag from "../../assets/fr.png";
+import trFlag from "../../../public/assets/tr.png";
+import enFlag from "../../../public/assets/en.png";
+import arFlag from "../../../public/assets/ar.png";
+import ruFlag from "../../../public/assets/ru.png";
+import frFlag from "../../../public/assets/fr.png";
 import { Language } from "../../contents/types";
 
 const LanguageSelector: React.FC = () => {

@@ -34,7 +34,7 @@ const Health: React.FC = () => {
 
         <div className="md:w-1/2 flex justify-center items-center">
           <img
-            src="../src/assets/wt_health.jpg"
+            src="/assets/wt_health.jpg"
             alt="About Us"
             className="w-full max-w-full md:max-w-[700px] h-auto object-cover rounded-lg"
           />

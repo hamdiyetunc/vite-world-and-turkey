@@ -25,7 +25,7 @@ const SliderSection: React.FC = () => {
     <Slider {...settings}>
       <div className="relative z-10">
         <img
-          src="../src/assets/slider-2.jpg"
+          src="/assets/slider-2.jpg"
           alt="Slider 1"
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
@@ -44,7 +44,7 @@ const SliderSection: React.FC = () => {
       </div>
       <div className="relative">
         <img
-          src="../src/assets/slider-1.jpg"
+          src="/assets/slider-1.jpg"
           alt="Slider 2"
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
